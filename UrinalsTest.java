@@ -104,6 +104,8 @@ class UrinalsTest {
         assertEquals(expected,count);
     }
 
+
+
     @Test
     public void freeUrinals_case011() {
         System.out.println("============ Sanika Yatin Gandhe =========== Test Ten executed");
@@ -142,9 +144,65 @@ class UrinalsTest {
 
     }
 
+    @Test
+    public void countEmptyUrinals() throws IOException {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Fourteen executed");
+        ArrayList<String> arr = new ArrayList<>();
+        arr.add("1");
+        arr.add("0");
+        arr.add("3");
+        arr.add("2");
+        arr.add("1");
+        arr.add("-1");
+        Urinals urinal = new Urinals();
+            ArrayList<String> free = new ArrayList<>();
+            ArrayList<String> contents = urinal.readFile("urinal.dat");
+            if (! contents.isEmpty()) {
+                for (String content : contents) {
+                    int res = urinal.freeUrinals(content);
+                    free.add(String.valueOf(res));
+                }
+            }
+        assertEquals(free,arr);
+    }
 
+    @Test
+    public void freeUrinals_case0() {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Fifteen executed");
+        String input = "0";
+        int count  = uri.freeUrinals(input);
 
+        int expected = 1;
+        assertEquals(expected,count);
+    }
 
+    @Test
+    public void freeUrinals_case10() {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Sixteen executed");
+        String input = "10";
+        int count  = uri.freeUrinals(input);
 
+        int expected = 0;
+        assertEquals(expected,count);
+    }
 
+    @Test
+    public void freeUrinals_case01() {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Seventeen executed");
+        String input = "01";
+        int count  = uri.freeUrinals(input);
+
+        int expected = 0;
+        assertEquals(expected,count);
+    }
+
+    @Test
+    public void freeUrinals_case00() {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Eighteen executed");
+        String input = "00";
+        int count  = uri.freeUrinals(input);
+
+        int expected = 1;
+        assertEquals(expected,count);
+    }
 }
