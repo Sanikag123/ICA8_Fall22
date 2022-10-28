@@ -1,3 +1,8 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Urinal {
 
 
@@ -45,5 +50,20 @@ public class Urinal {
             }
             return count;
         }
+    }
+
+    public ArrayList<String> readFile(String fileName) throws FileNotFoundException {
+        File file = new File(fileName);
+        ArrayList<String> fileContents = new ArrayList<String>();
+        try {
+            Scanner sc = new Scanner(file);
+            while (sc.hasNextLine()) {
+                fileContents.add(sc.nextLine());
+            }
+            return fileContents;
+        } catch (FileNotFoundException ex) {
+            throw ex;
+        }
+
     }
 }

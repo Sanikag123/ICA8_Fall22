@@ -1,6 +1,10 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class UrinalTest {
@@ -108,4 +112,23 @@ class UrinalTest {
         int expected = -1;
         assertEquals(expected,count);
     }
+
+    @Test
+    public void fileNotFoundException()  {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Eleven executed");
+        String file = "noUrinal.dat";
+        assertThrows(FileNotFoundException.class, () -> uri.readFile(file));
+    }
+
+    @Test
+    public void fileRead() throws FileNotFoundException {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Twelve executed");
+        String file = "urinal.dat";
+        ArrayList<String> contents = uri.readFile(file);
+        assertNotNull(contents);
+    }
+
+
+
+
 }
