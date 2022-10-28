@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -9,11 +8,11 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * @author Sanika Yatin Gandhe (ASURITE id - Sgandhe1)
  */
-class UrinalTest {
-    Urinal uri ;
+class UrinalsTest {
+    Urinals uri ;
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-       uri = new Urinal();
+       uri = new Urinals();
     }
 
     @org.junit.jupiter.api.AfterEach

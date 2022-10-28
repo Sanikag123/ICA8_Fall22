@@ -9,10 +9,10 @@ import java.util.Scanner;
 /**
  * @author Sanika Yatin Gandhe (ASURITE id - Sgandhe1)
  */
-public class Urinal {
+public class Urinals {
 
     public static void main(String[] args) {
-        Urinal urinal = new Urinal();
+        Urinals urinal = new Urinals();
         try {
             ArrayList<String> free = new ArrayList<>();
             System.out.println("Reading contents from file");
