@@ -1,8 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -126,6 +125,19 @@ class UrinalTest {
         String file = "urinal.dat";
         ArrayList<String> contents = uri.readFile(file);
         assertNotNull(contents);
+    }
+
+    @Test
+    public void fileWrite() throws IOException {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Thirteen executed");
+        ArrayList arr = new ArrayList();
+        arr.add("1");
+        arr.add("2");
+        arr.add("3");
+        String name = uri.writeFile(arr);
+        ArrayList<String> contents = uri.readFile(name);
+        assertEquals(contents,arr);
+
     }
 
 

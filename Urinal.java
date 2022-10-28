@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -64,6 +66,33 @@ public class Urinal {
         } catch (FileNotFoundException ex) {
             throw ex;
         }
+    }
 
+    public String writeFile(ArrayList<String> list) throws IOException {
+        File f = null;
+        if (new File("rule.txt").exists()) {
+            boolean flag = true;
+
+            int i = 1;
+            while (flag) {
+                f = new File("rule" + i + ".txt");
+                if (f.exists()) {
+                    i++;
+                }
+                // Print message if it exists
+                else
+                    flag = false;
+            }
+        }
+
+        else
+            f = new File("rule.txt");
+
+        FileWriter writer = new FileWriter(f);
+        for(String str: list) {
+            writer.write(str + System.lineSeparator());
+        }
+        writer.close();
+        return f.getName();
     }
 }
