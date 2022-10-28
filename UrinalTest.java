@@ -40,4 +40,12 @@ class UrinalTest {
         boolean expected = uri.isStringValid(input);
         assertTrue(expected);
     }
+
+    @Test
+    public void inValidStringInputs_1111() {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Four executed");
+        String input = "1111";
+        boolean expected = uri.isStringValid(input);
+        assertFalse(expected);
+    }
 }
