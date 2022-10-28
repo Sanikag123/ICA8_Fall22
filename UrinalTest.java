@@ -58,4 +58,14 @@ class UrinalTest {
         int expected = 1;
         assertEquals(expected,count);
     }
+
+    @Test
+    public void freeUrinals_case1001() {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Six executed");
+        String input = "1001";
+        int count  = uri.freeUrinals(input);
+
+        int expected = 0;
+        assertEquals(expected,count);
+    }
 }
