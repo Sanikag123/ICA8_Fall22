@@ -7,6 +7,35 @@ import java.util.Scanner;
 
 public class Urinal {
 
+    public static void main(String[] args) {
+        Urinal urinal = new Urinal();
+        try {
+            ArrayList<String> free = new ArrayList<>();
+            System.out.println("Reading contents from file");
+            ArrayList<String> contents = urinal.readFile("urinal.dat");
+            if (! contents.isEmpty()) {
+                for (String content : contents) {
+                    int res = urinal.freeUrinals(content);
+                    free.add(String.valueOf(res));
+                    System.out.println("\nInput: " + content);
+                    System.out.println("Output: " + res);
+
+                }
+                System.out.println("Writing number of free urinals to the file");
+                String fileName = urinal.writeFile(free);
+
+                System.out.println("Contents successfully written to file: " + fileName);
+            }
+            else
+            {
+                System.out.println("File is empty");
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public boolean isStringValid(String str) {
         if(str.contains("11")) {
