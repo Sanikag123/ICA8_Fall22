@@ -6,17 +6,20 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * @author Sanika Yatin Gandhe (ASURITE id - Sgandhe1)
+ */
 class UrinalTest {
-    Urinal uri = new Urinal();
+    Urinal uri ;
     @org.junit.jupiter.api.BeforeEach
     void setUp() {
-
+       uri = new Urinal();
     }
 
     @org.junit.jupiter.api.AfterEach
     void tearDown() {
+        uri = null;
     }
-
 
 
     @Test

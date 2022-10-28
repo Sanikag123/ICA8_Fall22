@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+/**
+ * @author Sanika Yatin Gandhe (ASURITE id - Sgandhe1)
+ */
 public class Urinal {
 
     public static void main(String[] args) {
