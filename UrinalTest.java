@@ -17,7 +17,7 @@ class UrinalTest {
 
 
     @Test
-    public void inValidStringInputs() {
+    public void inValidStringInputs_1011() {
         System.out.println("============ Sanika Yatin Gandhe =========== Test ONE executed");
         String input = "1011";
         boolean actual = false;
@@ -26,9 +26,17 @@ class UrinalTest {
     }
 
     @Test
-    public void validStringInputs() {
+    public void validStringInputs_101() {
         System.out.println("============ Sanika Yatin Gandhe =========== Test TWO executed");
         String input = "101";
+        boolean expected = uri.isStringValid(input);
+        assertTrue(expected);
+    }
+
+    @Test
+    public void validStringInputs_001() {
+        System.out.println("============ Sanika Yatin Gandhe =========== Test Three executed");
+        String input = "001";
         boolean expected = uri.isStringValid(input);
         assertTrue(expected);
     }
