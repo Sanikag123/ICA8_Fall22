@@ -1,8 +1,11 @@
 public class Urinal {
 
 
-    public boolean isStringValid() {
-       System.out.println("Not yet implemented");
+    public boolean isStringValid(String str) {
+        if(str.contains("11")) {
+            return false;
+        }
+
         return true;
     }
 

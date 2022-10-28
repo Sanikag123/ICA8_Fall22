@@ -18,10 +18,9 @@ class UrinalTest {
 
     @Test
     public void inValidStringInputs() {
-        System.out.println("====================== Sanika Yatin Gandhe === Test ONE executed===============================");
-         boolean actual = false;
-        boolean expected = uri.isStringValid();
+        String input = "1011";
+        boolean actual = false;
+        boolean expected = uri.isStringValid(input);
         assertEquals(actual,expected);
-
     }
 }
